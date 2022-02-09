@@ -1,4 +1,4 @@
-// 1
+// 1 Stwórz w zasięgu globalnym po jednej zmiennej każdego typu i przypisz im odpowiednie wartości
 
 let isTrue = true;
 let null0 = null;
@@ -17,7 +17,8 @@ let num2  = 10;
 
 
 
-// 2a
+// 2a Stwórz następujące funkcje (każda z nich powinna zmieniać wartość jakiejś zmiennej zdefiniowanej w zasięgu globalnym):
+
 
 function add (num1,num2) {
 
@@ -41,7 +42,9 @@ function add (num1,num2) {
 
 add(2,2);
 
-// 2b
+// 2b Funkcja greet, która przyjmuje jeden parametr z domyślną wartością ‘This function’ i zwraca:
+// Jeśli parametr ma typ String: wartość tekstową, która będzie połączeniem parametru z wartością ‘ mówi cześć!’
+// Jeśli parametr nie ma typu String: wartość tekstową ‘Parametr musi być wartością tekstową’
 
 function greet (x= "This function ") {
 
@@ -54,7 +57,10 @@ function greet (x= "This function ") {
 
 greet();
 
-// 2c
+// 2c Funkcję checkType, która przyjmuje jeden parametr i zwróci:
+// wartość tekstową z nazwą typu jaki posiada podana w parametrze wartość np. ‘String’ lub ‘Number)
+// tekst ‘brak parametru’ jeśli ten nie został podany
+
 
 function checkType (x) {
 
@@ -70,7 +76,10 @@ if(x=== undefined) {
 
 checkType(3);
 
-// 2d
+// 2d  Funkcję sum, która przyjmuje jeden parametr i zwraca:
+// jeśli parametr jest tablicą: sumę wszystkich wartości liczbowych z tablicy
+// Jeśli parametr nie jest tablicą: ‘Podany parametr musi być tablicą’
+
 
 
 let abc = [1,2,323];
@@ -93,7 +102,8 @@ console.log(sum);
 
 sum(abc);
 
-// 2e
+// 2e Funkcję willThereBeEnoughSpace, która przyjmuje trzy parametry (zakładamy, że za każdym razem będą to liczby):
+
 
 function willThereBeEnoughSpace(cap, on, wait) {
  let maxCap = cap - 1;
@@ -118,7 +128,7 @@ function willThereBeEnoughSpace(cap, on, wait) {
 willThereBeEnoughSpace(100, 49,50);
 
 
-// 2f
+// 2f Funkcję runConditionally, która przyjmuje jeden parametr (załóżmy, że za każdym razem będzie to boolean) i zwraca:
 
 let checkIfTrue = false;
 
