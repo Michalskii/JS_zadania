@@ -82,7 +82,7 @@ checkType(3);
 
 
 
-let abc = [1,2,323];
+let abc = [1,2,-1,3,];
 
 function sum(arr) {
 
@@ -92,8 +92,16 @@ function sum(arr) {
     } else if(Array.isArray(arr)) {
         console.log("it is an array")
     
-        for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
+
+    let numbersOnly = (val) => {
+      if (typeof(val) === 'number') {      
+        return val;
+      }
+    }
+    let numbers = arr.filter(numbersOnly);
+    
+    for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
 }
 console.log(sum);
 
@@ -130,15 +138,22 @@ willThereBeEnoughSpace(100, 49,50);
 
 // 2f Funkcję runConditionally, która przyjmuje jeden parametr (załóżmy, że za każdym razem będzie to boolean) i zwraca:
 
-let checkIfTrue = false;
+let checkIfTrue = true;
 
 function runConditionally(isTrue) {
 
+    function handleTrue() {
+        console.log('handling true!')
+    }
+
+    function handleFalse() {
+        console.log("handling false!")
+    }
     if (isTrue == true) {
-        console.log("it is true")
+        handleTrue();
 
     } else if(isTrue ==false) {
-        console.log("it is false")
+        handleFalse();
     }
 
 }
